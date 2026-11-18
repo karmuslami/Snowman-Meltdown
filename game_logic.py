@@ -37,7 +37,9 @@ def play_game():
     while mistakes < 3 and remaining_letters != 0:
         guess = input("Guess a letter: ").lower()
 
-        if guess not in guessed_letters:
+        if len(guess) != 1:
+            print("You must enter ONE letter!")
+        elif guess not in guessed_letters:
             guessed_letters.append(guess)
 
             if guess not in secret_word:
