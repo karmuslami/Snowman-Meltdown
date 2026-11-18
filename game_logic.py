@@ -49,3 +49,9 @@ def play_game():
 
         display_game_state(mistakes, secret_word, guessed_letters)
         print(f"Already guessed letters: {sorted(guessed_letters)}")
+
+    if mistakes == 3:
+        print("Oh no, the snowman melted.")
+        print("The word was: ", secret_word)
+    elif remaining_letters == 0:
+        print("Congratulations, you saved the snowman!")
