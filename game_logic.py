@@ -57,3 +57,9 @@ def play_game():
         print("The word was: ", secret_word)
     elif remaining_letters == 0:
         print("Congratulations, you saved the snowman!")
+
+    print("")
+    play_again = input("Do you want to play again? (y, n) ")
+
+    if play_again.lower() == "y":
+        play_game()
