@@ -34,7 +34,7 @@ def play_game():
     print("Welcome to Snowman Meltdown!")
     display_game_state(mistakes, secret_word, guessed_letters)
 
-    while mistakes < 3 and remaining_letters != 0:
+    while mistakes < 4 and remaining_letters != 0:
         guess = input("Guess a letter: ").lower()
 
         if len(guess) != 1:
@@ -52,7 +52,7 @@ def play_game():
         display_game_state(mistakes, secret_word, guessed_letters)
         print(f"Already guessed letters: {sorted(guessed_letters)}")
 
-    if mistakes == 3:
+    if mistakes == 4:
         print("Oh no, the snowman melted.")
         print("The word was: ", secret_word)
     elif remaining_letters == 0:
